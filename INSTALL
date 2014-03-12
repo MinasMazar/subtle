@@ -1,0 +1,73 @@
+Install
+-------
+
+Dependencies
+============
+
+subtle has the following dependencies:
+
+ 1. Ruby[1] (>=1.9)
+ 2. Rake[2] (>=0.8)
+ 3. X11[3] (>=6.8.2)
+
+And folowing optional gems for sur:
+
+ 1. curb[4] (>=0.5.1.0) (sur only)
+ 2. archive-tar-minitar[5] (>=0.5.2)
+ 3. datamapper[6] (>=0.9.11) (surserver only)
+ 4. sinatra[7] (>=0.9.4) (surserver only)
+
+Versions
+========
+
+Stable releases can be found here[8]. If you like you can clone the Mercurial[9]
+repository and install the developer version as followed:
+
+ 1. hg clone http://hg.subforge.org/subtle
+ 2. cd subtle
+ 3. rake [options]
+ 4. rake install
+
+The installer will copy the files to following XDG[10] default
+path: (see: rake help)
+
+ * Binaries   -> /usr/bin
+ * Config     -> /etc/xdg/subtle
+ * Extension  -> (Ruby Dir)/subtle
+ * Scripts    -> /usr/share/subtle
+
+The paths can be easily changed (see: rake help) and are printed after
+configuring is done. subtle[11] will create cache files to keep track of the
+settings, whenever you need to change a path later you need to delete the old
+caches with 'rake clobber'.
+
+Config
+======
+
+On start subtle[11] will check if a config file is available in the typical XDG
+paths and use it. A local config is preferred over a system wide.
+(see: $XDG_CONFIG_HOME)
+
+Then it will have a look for sublets[12] in the XDG paths too and load them
+accordingly. (see $XDG_DATA_HOME)
+
+ * To create a user config just create '$XDG_CONFIG_HOME/subtle' and copy the
+   latest config from the 'data' folder into it.
+ * To enable sublets[12] create '$XDG_DATA_HOME/subtle/sublets' and create
+   symlinks to the sublets[12].  (Load order is alphabetically)
+
+Always compare your existing config with the one of the repository/tarball to
+get the latest options and check the latest news.
+
+[1] http://www.ruby-lang.org
+[2] http://rake.rubyforge.org
+[3] http://xorg.freedesktop.org
+[4] http://curb.rubyforge.org
+[5] http://rubyforge.org/projects/ruwiki
+[6] http://datamapper.org
+[7] http://www.sinatrarb.com
+[8] http://subforge.org/projects/list_files/subtle
+[9] http://www.selenic.com/mercurial
+[10] http://standards.freedesktop.org/basedir-spec/latest/
+[11] http://subforge.org/wiki/subtle/Subtle
+[12] http://subforge.org/wiki/subtle/Sublets

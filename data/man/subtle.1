@@ -1,0 +1,152 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SUBTLE" "1" "October 2011" "" ""
+.
+.SH "NAME"
+\fBsubtle\fR \- a grid\-based manual tiling window manager
+.
+.SH "SYNOPSIS"
+\fBsubtle\fR \fIOPTIONS\fR
+.
+.SH "DESCRIPTION"
+\fBsubtle\fR is a \fBmanual\fR tiling window manager with a rather uncommon approach of tiling: Instead of relying on predefined layouts, subtle divides the screen into a grid with customizeable slots (called gravities)\. For better understanding, the default config uses a 3x3 grid and maps each gravity to one key of the numpad\. With those keys, windows can be moved directly to the desired gravity \- the same can be done with tagging rules in the config\.
+.
+.P
+Another unique concept is the \fBstrict\fR tagging: Unlike other tiling window managers, subtle doesn\'t allow \fBweak\fR tagging and always maps windows to virtual desktops (called views) with matching tags, \fBregardless\fR of the current active view\.
+.
+.SH "OPTIONS"
+.
+.IP "\(bu" 4
+\fB\-c\fR, \fB\-\-config\fR=CONFIG
+.
+.br
+Load config
+.
+.IP "\(bu" 4
+\fB\-d\fR, \fB\-\-display\fR=DISPLAY
+.
+.br
+Connect to DISPLAY
+.
+.IP "\(bu" 4
+\fB\-h\fR, \fB\-\-help\fR
+.
+.br
+Show this help and exit
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-check\fR
+.
+.br
+Check config syntax
+.
+.IP "\(bu" 4
+\fB\-n\fR, \fB\-\-no\-randr\fR
+.
+.br
+Disable RandR extension (required for Twinview)
+.
+.IP "\(bu" 4
+\fB\-r\fR, \fB\-\-replace\fR
+.
+.br
+Replace current window manager
+.
+.IP "\(bu" 4
+\fB\-s\fR, \fB\-\-sublets\fR=DIR
+.
+.br
+Load sublets from DIR
+.
+.IP "\(bu" 4
+\fB\-v\fR, \fB\-\-version\fR
+.
+.br
+Show version info and exit
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-level\fR=LEVEL[,LEVEL] Set logging levels
+.
+.IP "\(bu" 4
+\fB\-D\fR, \fB\-\-debug\fR
+.
+.br
+Print debugging messages
+.
+.IP "" 0
+.
+.SH "LOGLEVELS"
+\fBsubtle\fR uses a loglevel system to distinguish between messages and to be able to turn certain messages off\. The level can be set with the \-l or \-\-level= options, multiple values are comma separated without any whitespace\.
+.
+.IP "\(bu" 4
+\fBsubtle \-l ruby,subtlext\fR
+.
+.IP "\(bu" 4
+\fBsubtle \-\-level=ruby,subtlext\fR
+.
+.IP "" 0
+.
+.P
+Default levels:
+.
+.IP "\(bu" 4
+\fBwarnings\fR Warning messages
+.
+.IP "\(bu" 4
+\fBsublet\fR Sublet warnings
+.
+.IP "\(bu" 4
+\fBerror\fR Error messages
+.
+.IP "\(bu" 4
+\fBdeprecated\fR Deprecation warnings
+.
+.IP "" 0
+.
+.P
+Debugging levels:
+.
+.IP "\(bu" 4
+\fBevents\fR Information about handled events
+.
+.IP "\(bu" 4
+\fBruby\fR Ruby debugging messages
+.
+.IP "\(bu" 4
+\fBxerror\fR X11 error messages
+.
+.IP "\(bu" 4
+\fBsubtlext\fR Debugging messages of subtlext
+.
+.IP "\(bu" 4
+\fBsubtle\fR Subsystem messages of subtle
+.
+.IP "\(bu" 4
+\fBdebug\fR General debugging messages
+.
+.IP "" 0
+.
+.SH "GETTING STARTED"
+To get started with subtle just follow the install instructions, have a look in the \fBINSTALL\fR file in the tarball or check if there is a package for your distribution\. If no package is available and you want to supply one you are welcome\.
+.
+.P
+Next step after installing is configuring\. \fBsubtle\fR follows the \fBXDG\fR specifications, therefore can the default system config be found in \fI$XDG_CONFIG_DIRS/subtle\fR or in \fI/etc/xdg/subtle\fR\. If you prefer a user based config just copy the system config to \fI$XDG_CONFIG_HOME/subtle\fR or to \fI$HOME/\.config/subtle\fR\.
+.
+.P
+If you update the config please check it with \fBsubtle \-k\fR first before starting subtle\.
+.
+.P
+Inside of \fBsubtle\fR just press \fBWin+Return\fR to launch a xterm which usually starts at center gravity\. Once you have a client you can play with gravites to get used to the system\. It\'s really easy and straight forward, just try the various combinations of \fBWin+Numpad\fR number\.
+.
+.SH "BUGS"
+Report bugs at http://subforge\.org/projects/subtle/issues
+.
+.br
+Homepage: http://subtle\.subforge\.org
+.
+.SH "COPYRIGHT"
+Copyright (c) Christoph Kappel \fIunexist@subforge\.org\fR
+.
+.SH "SEE ALSO"
+subtle(1), subtler(1), subtlext(1), sur(1), surserver(1)

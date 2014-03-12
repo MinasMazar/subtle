@@ -1,0 +1,38 @@
+--- |
+ --- 
+ - cc: gcc
+   destdir: ""
+   prefix: /usr
+   manprefix: /usr/share/man
+   bindir: //usr/bin
+   sysconfdir: /etc
+   configdir: /etc/xdg/subtle
+   datadir: //usr/share/subtle
+   extdir: //home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/site_ruby/1.9.1/subtle
+   mandir: //usr/share/man/man1
+   debug: "no"
+   xpm: "yes"
+   xft: "yes"
+   xinerama: "yes"
+   xrandr: "yes"
+   xtest: "yes"
+   builddir: build
+   hdrdir: /home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1
+   archdir: /home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux
+   revision: "3224"
+   cflags: "-Wall -Werror -Wpointer-arith -Wstrict-prototypes -Wunused -Wshadow -std=gnu99 -DNDEBUG  "
+   cpppath: "-I. -Ibuild -Isrc -Isrc/shared -Isrc/subtle -idirafter/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -idirafter/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux  -I/usr/include/freetype2 "
+   ldflags: "-L/usr/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-rpath=/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lpthread -lrt -ldl -lcrypt -lm  -lruby  -lX11   -lXft  -lXinerama  -lXrandr "
+   extflags: -L.  -rdynamic -Wl,-export-dynamic -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-rpath=/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lpthread -lrt -ldl -lcrypt -lm  -lruby  -lX11   -lXpm -lX11   -lXft  -lXinerama -lXtst
+   rpath: -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-rpath=/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib
+   checksums: 
+   - d9bd3af1252f44250b12d070f493f0f7
+   - 8fc032c735e2cc013205e01508174d06
+   - 6c6092b3cf8ebef79ccbbc608e5b33be
+   sitelibdir: /home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/site_ruby/1.9.1
+ - PKG_NAME: subtle
+   PKG_VERSION: 0.11.3224
+   PKG_BUGREPORT: http://subforge.org/projects/subtle/issues
+   PKG_CONFIG: subtle.rb
+   RUBY_VERSION: 1.9.1
+

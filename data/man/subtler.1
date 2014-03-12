@@ -1,0 +1,633 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SUBTLER" "1" "November 2011" "" ""
+.
+.SH "NAME"
+\fBsubtler\fR \- a commandline interface for subtle
+.
+.SH "SYNOPSIS"
+\fBsubtler\fR [GENERIC|MODIFIER] GROUP ACTION [ARG1] [ARG2]
+.
+.SH "DESCRIPTION"
+\fBsubtler\fR is a commandline tool, that allows interacting with a \fBEWMH/NetWM\fR compatible window manager and especially with subtle(1) from a shell\.
+.
+.P
+The arguments of \fBsubtler\fR are quite complex and allow a variety of spellings and different number of arguments\. Most of the commands require at least one argument and return output of following format:
+.
+.SH "FORMAT"
+.
+.SH "INPUT"
+.
+.IP "\(bu" 4
+\fBDISPLAY\fR :<display number>
+.
+.IP "\(bu" 4
+\fBID\fR <number>
+.
+.IP "\(bu" 4
+\fBGEOMETRY\fR <x>x<y>+<width>+<height>
+.
+.IP "\(bu" 4
+\fBNAME\fR <string|number>
+.
+.IP "\(bu" 4
+\fBDATA\fR <string|number>
+.
+.IP "\(bu" 4
+\fBPATTERN\fR
+.
+.br
+Matching works either via plaintext, regex(7), id or window id if applicable\. If a pattern matches more than once ALL matches are used\.
+.
+.IP
+If the \fBPATTERN\fR is \- subtler will read from stdin\.
+.
+.IP "" 0
+.
+.SH "OUTPUT"
+.
+.IP "\(bu" 4
+\fBClient listing\fR <window id> <visibility> <view id> <geometry> <gravity> <flags> <instance name> (<class name>)
+.
+.IP "\(bu" 4
+\fBGravity listing\fR <gravity id> <geometry>
+.
+.IP "\(bu" 4
+\fBScreen listing\fR <screen id> <geometry>
+.
+.IP "\(bu" 4
+\fBTag listing\fR <tag name>
+.
+.IP "\(bu" 4
+\fBTray listing\fR <window id> <instance name> (<class name>)
+.
+.IP "\(bu" 4
+\fBView listing\fR <window id> <visibility> <view id> <view name>
+.
+.IP "" 0
+.
+.SH "FIELDS"
+.
+.IP "\(bu" 4
+<window id> Numeric (hex) id (e\.g\. 0xa00009)
+.
+.IP "\(bu" 4
+<visibility> \- = not visible, * = visible
+.
+.IP "\(bu" 4
+<view id> Numeric id (e\.g\. 5)
+.
+.IP "\(bu" 4
+<geometry> x x y + width + height
+.
+.IP "\(bu" 4
+<flags> \- = not set, + = fullscreen, ^ = float, * = stick, ~ = resize, = = zaphod, ! = fixed
+.
+.IP "\(bu" 4
+<instance name> Window instance/resource name
+.
+.IP "\(bu" 4
+<class name> Window class name
+.
+.IP "\(bu" 4
+<gravity id> Numeric id of gravity (e\.g\. 2)
+.
+.IP "\(bu" 4
+<screen id> Numeric id of a screen (e\.g\. 1)
+.
+.IP "\(bu" 4
+<tag name> Name of a tag (e\.g\. terms)
+.
+.IP "" 0
+.
+.SH "OPTIONS"
+.
+.SH "GENERIC"
+.
+.IP "\(bu" 4
+\fB\-d\fR, \fB\-\-display\fR=DISPLAY
+.
+.br
+Connect to DISPLAY (default: :0)
+.
+.IP "\(bu" 4
+\fB\-h\fR, \fB\-\-help\fR
+.
+.br
+Show this help and exit
+.
+.IP "\(bu" 4
+\fB\-V\fR, \fB\-\-version\fR
+.
+.br
+Show version info and exit
+.
+.IP "\(bu" 4
+\fB\-p\fR, \fB\-\-proc\fR
+.
+.br
+This creates a ruby proc from the given argument and yields the result of the group to it as parameter \fIparam\fR\.
+.
+.IP
+\fIExamples\fR:
+.
+.IP
+subtler \-cl \-p "puts param\.name"
+.
+.br
+subtler \-cC \-p "param\.gravity = { terms: :left }"
+.
+.IP "" 0
+.
+.SH "MODIFIER"
+.
+.IP "\(bu" 4
+\fB\-r\fR, \fB\-\-reload\fR
+.
+.br
+Reload subtle
+.
+.IP "\(bu" 4
+\fB\-R\fR, \fB\-\-restart\fR
+.
+.br
+Restart subtle
+.
+.IP "\(bu" 4
+\fB\-q\fR, \fB\-\-quit\fR
+.
+.br
+Quit subtle
+.
+.IP "\(bu" 4
+\fB\-C\fR, \fB\-\-current\fR
+.
+.br
+Select current active window/view instead of passing it via argument\.
+.
+.IP
+\fIExample\fR: subtler \-cCf
+.
+.IP "\(bu" 4
+\fB\-X\fR, \fB\-\-select\fR
+.
+.br
+Select a window via pointer instead of passing it via argument\.
+.
+.IP
+\fIExample\fR: subtler \-cXf
+.
+.IP "" 0
+.
+.SH "GROUPS"
+.
+.IP "\(bu" 4
+\fB\-c\fR, \fB\-\-Client\fR
+.
+.br
+Use client group
+.
+.IP "\(bu" 4
+\fB\-g\fR, \fB\-\-Gravity\fR
+.
+.br
+Use gravity group
+.
+.IP "\(bu" 4
+\fB\-e\fR, \fB\-\-Screen\fR
+.
+.br
+Use screen group
+.
+.IP "\(bu" 4
+\fB\-s\fR, \fB\-\-Sublet\fR
+.
+.br
+Use sublet group
+.
+.IP "\(bu" 4
+\fB\-t\fR, \fB\-\-Tag\fR
+.
+.br
+Use tag group
+.
+.IP "\(bu" 4
+\fB\-y\fR, \fB\-\-Tray\fR
+.
+.br
+Use tray group
+.
+.IP "\(bu" 4
+\fB\-v\fR, \fB\-\-View\fR
+.
+.br
+Use views group
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR CLIENTS"
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => PATTERN
+.
+.br
+Find client
+.
+.IP
+\fIExample\fR: subtler \-cf urxvt
+.
+.IP "\(bu" 4
+\fB\-o\fR, \fB\-\-focus\fR => PATTERN
+.
+.br
+Set focus to client
+.
+.IP
+\fIExample\fR: subtler \-co urxvt
+.
+.IP "\(bu" 4
+\fB\-F\fR, \fB\-\-full\fR => PATTERN
+.
+.br
+Toggle full
+.
+.IP
+\fIExample\fR: subtler \-cF urxvt
+.
+.IP "\(bu" 4
+\fB\-O\fR, \fB\-\-float\fR => PATTERN
+.
+.br
+Toggle float
+.
+.IP
+\fIExample\fR: subtler \-cO urxvt
+.
+.IP "\(bu" 4
+\fB\-S\fR, \fB\-\-stick\fR => PATTERN
+.
+.br
+Toggle stick
+.
+.IP
+\fIExample\fR: subtler \-cS urxvt
+.
+.IP "\(bu" 4
+\fB\-N\fR, \fB\-\-urgent\fR => PATTERN
+.
+.br
+Toggle urgent
+.
+.IP
+\fIExample\fR: subtler \-cN urxvt
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all clients
+.
+.IP "\(bu" 4
+\fB\-T\fR, \fB\-\-tag\fR => PATTERN
+.
+.br
+Add tag to client
+.
+.IP
+\fIExample\fR: subtler \-cT urxvt tag
+.
+.IP "\(bu" 4
+\fB\-U\fR, \fB\-\-untag\fR => PATTERN NAME
+.
+.br
+Remove tag from client
+.
+.IP
+\fIExample\fR: subtler \-cU urxvt tag
+.
+.IP "\(bu" 4
+\fB\-G\fR, \fB\-\-tags\fR => PATTERN
+.
+.br
+Show client tags
+.
+.IP
+\fIExample\fR: subtler \-cG urxvt
+.
+.IP "\(bu" 4
+\fB\-Y\fR, \fB\-\-gravity\fR => PATTERN PATTERN
+.
+.br
+Set client gravity
+.
+.IP
+\fIExample\fR: subtler \-cY urxvt gravity
+.
+.IP "\(bu" 4
+\fB\-E\fR, \fB\-\-raise\fR => PATTERN
+.
+.br
+Raise client window
+.
+.IP
+\fIExample\fR: subtler \-cE urxvt
+.
+.IP "\(bu" 4
+\fB\-L\fR, \fB\-\-lower\fR => PATTERN
+.
+.br
+Lower client window
+.
+.IP
+\fIExample\fR: subtler \-cL urxvt
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-kill\fR => PATTERN
+.
+.br
+Kill client
+.
+.IP
+\fIExample\fR: subtler \-ck urxvt
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR GRAVITIES"
+.
+.IP "\(bu" 4
+\fB\-a\fR, \fB\-\-add\fR => NAME GEOMETRY
+.
+.br
+Create new gravity
+.
+.IP
+\fIExample\fR: subtler \-ga test 0x0+100+100
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all gravities
+.
+.IP
+\fIExample\fR: subtler \-gl
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => PATTERN
+.
+.br
+Find a gravity
+.
+.IP
+\fIExample\fR: subtler \-gf center
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-kill\fR => PATTERN
+.
+.br
+Kill gravity
+.
+.IP
+\fIExample\fR: subtler \-gk center
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR SCREENS"
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all screens
+.
+.IP
+\fIExample\fR: subtler \-el
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => ID
+.
+.br
+Find a screen
+.
+.IP
+\fIExample\fR: subtler \-ef 0
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR SUBLETS"
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all sublets
+.
+.IP
+\fIExample\fR: subtler \-sl
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => PATTERN
+.
+.br
+Find sublet
+.
+.IP
+\fIExample\fR: subtler \-sf sublet
+.
+.IP "\(bu" 4
+\fB\-u\fR, \fB\-\-update\fR
+.
+.br
+Updates value of sublet
+.
+.IP
+\fIExample\fR: subtler \-su
+.
+.IP "\(bu" 4
+\fB\-D\fR, \fB\-\-data\fR => PATTERN DATA
+.
+.br
+Send data to sublet
+.
+.IP
+\fIExample\fR: subtler \-sD sublet something
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-kill\fR => PATTERN
+.
+.br
+Kill sublet
+.
+.IP
+\fIExample\fR: subtler \-sk PATTERN
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR TAGS"
+.
+.IP "\(bu" 4
+\fB\-a\fR, \fB\-\-add\fR => NAME
+.
+.br
+Create new tag
+.
+.IP
+\fIExample\fR: subtler \-ta tag
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => PATTERN
+.
+.br
+Find all clients/views by tag
+.
+.IP
+\fIExample\fR: subtler \-ta tag
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all tags
+.
+.IP
+\fIExample\fR: subtler \-tl
+.
+.IP "\(bu" 4
+\fB\-I\fR, \fB\-\-clients\fR
+.
+.br
+Show clients with tag
+.
+.IP
+\fIExample\fR: subtler \-tI
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-kill\fR => PATTERN
+.
+.br
+Kill tag
+.
+.IP
+\fIExample\fR: subtler \-tk PATTERN
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR TRAYS"
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => PATTERN
+.
+.br
+Find a tray
+.
+.IP
+\fIExample\fR: subtler \-yf PATTERN
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all trays
+.
+.IP
+\fIExample\fR: subtler \-yl
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-kill\fR => PATTERN
+.
+.br
+Kill tray
+.
+.IP
+\fIExample\fR: subtler \-yk PATTERN
+.
+.IP "" 0
+.
+.SH "ACTIONS FOR VIEWS"
+.
+.IP "\(bu" 4
+\fB\-a\fR, \fB\-\-add\fR => NAME
+.
+.br
+Create new view
+.
+.IP
+\fIExample\fR: subtler \-va NAME
+.
+.IP "\(bu" 4
+\fB\-f\fR, \fB\-\-find\fR => PATTERN
+.
+.br
+Find a view
+.
+.IP
+\fIExample\fR: subtler \-vf PATTERN
+.
+.IP "\(bu" 4
+\fB\-l\fR, \fB\-\-list\fR
+.
+.br
+List all views
+.
+.IP
+\fIExample\fR: subtler \-vl
+.
+.IP "\(bu" 4
+\fB\-T\fR, \fB\-\-tag\fR => PATTERN NAME
+.
+.br
+Add tag to view
+.
+.IP
+\fIExample\fR: subtler \-vT terms tag
+.
+.IP "\(bu" 4
+\fB\-U\fR, \fB\-\-untag\fR => PATTERN NAME
+.
+.br
+Remove tag from view
+.
+.IP
+\fIExample\fR: subtler \-vT terms tag
+.
+.IP "\(bu" 4
+\fB\-G\fR, \fB\-\-tags\fR
+.
+.br
+Show view tags
+.
+.IP
+\fIExample\fR: subtler \-vG terms
+.
+.IP "\(bu" 4
+\fB\-I\fR, \fB\-\-clients\fR
+.
+.br
+Show clients on view
+.
+.IP
+\fIExample\fR: subtler \-vI terms
+.
+.IP "\(bu" 4
+\fB\-k\fR, \fB\-\-kill\fR => PATTERN
+.
+.br
+Kill view
+.
+.IP
+\fIExample\fR: subtler \-vk terms
+.
+.IP "" 0
+.
+.SH "BUGS"
+Report bugs at http://subforge\.org/projects/subtle/issues
+.
+.br
+Homepage: http://subtle\.subforge\.org
+.
+.SH "COPYRIGHT"
+Copyright (c) Christoph Kappel <unexist@subforge\.org>
+.
+.SH "SEE ALSO"
+subtle(1), subtlext(1), sur(1), surserver(1)

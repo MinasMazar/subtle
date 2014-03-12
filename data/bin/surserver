@@ -1,0 +1,40 @@
+#!/usr/bin/ruby
+# -*- encoding: utf-8 -*-
+#
+# @package sur - surserver
+#
+# @file SUR - Subtle User Repository
+# @author Christoph Kappel <unexist@subforge.org>
+# @version $Id: sur.rb,v 7 2009/09/07 21:25:11 unexist $
+#
+# This program can be distributed under the terms of the GNU GPLv2.
+# See the file COPYING for details.
+#
+
+begin
+  require "subtle/sur/version"
+  require "subtle/sur/server"
+
+  Subtle::Sur::Server.new.run
+rescue LoadError => error
+  missing = error.to_s.split(" ").last
+
+  # Check missing files
+  if "archive/tar/minitar" == missing
+    missing = "archive-tar-minitar"
+  end
+
+  puts <<EOF
+>>> ERROR: Cannot find the gem #{missing}
+>>>        Please install it with following command:
+>>>        gem install #{missing}
+EOF
+rescue => error
+  puts ">>> ERROR: #{error}"
+
+  unless error.is_a?(RuntimeError)
+    puts error.backtrace
+  end
+end
+
+# vim:ts=2:bs=2:sw=2:et:fdm=marker:ft=ruby

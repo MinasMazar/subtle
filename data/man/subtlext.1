@@ -1,0 +1,72 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "SUBTLEXT" "1" "October 2011" "" ""
+.
+.SH "NAME"
+\fBsubtlext\fR \- a ruby extension for subtle
+.
+.SH "SYNOPSIS"
+\fBsubtlext\fR
+.
+.SH "DESCRIPTION"
+\fBsubtlext\fR is an extension that brings the power of \fBsubtler\fR to Ruby\.
+.
+.P
+A compending list of the classes with it\'s functionality can be found in rdoc and informations about the available unit tests in the development section\.
+.
+.SH "EXAMPLE"
+.
+.nf
+
+require("subtle/subtlext")
+
+puts "subtle %s on %s" %
+  [Subtlext::Subtle\.version, Subtlext::Subtle\.running? ?
+  Subtlext::Subtle\.display : "none"]
+
+puts "Tags: %s" % [Subtlext::Tag[:all]\.join(", ")]
+
+# Views
+views = []
+Subtlext::View[:all]\.each do |v|
+  views\.push("%s (%s)" % [v\.current? ? "[#{v}]" : v, v\.tags\.join(", ")])
+end
+puts "Views: %s" % [views\.join(", ")]
+
+# Clients
+clients = []
+Subtlext::Client[:all]\.each do |c|
+  clients\.push("%s (%s)" % [c, c\.tags\.join(", ")])
+end
+puts "Clients: %s" % [clients\.join(", ")]
+.
+.fi
+.
+.SH "OUTPUT"
+.
+.nf
+
+subtle 0\.8\.1684 on :0\.0
+Tags: default, test, void, terms, browser, editor, stick, float, eight,
+  two, seven, one, bashrun, sakura, python
+Views: terms (terms, eight, two), [www] (browser, eight, two),
+void (default, void, eight, two), editor (test, editor, seven, one)
+Clients: urxvt2 (two, one), urxvt1 (eight, seven),
+  subtle \- Subtlext \- Redmine \- Vimperator (browser),
+  Xephyr on :2\.0 (ctrl+shift grabs mouse and keyboard) (test, float),
+  event\.c (~/projects/subtle/src/subtle) \- GVIM (editor)
+.
+.fi
+.
+.SH "BUGS"
+Report bugs at http://subforge\.org/projects/subtle/issues
+.
+.br
+Homepage: http://subtle\.subforge\.org
+.
+.SH "COPYRIGHT"
+Copyright (c) Christoph Kappel \fIunexist@subforge\.org\fR
+.
+.SH "SEE ALSO"
+subtle(1), subtler(1), sur(1), surserver(1)

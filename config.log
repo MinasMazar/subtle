@@ -1,0 +1,461 @@
+rm -rf conftest.dSYM
+rm -rf conftest.dSYM
+have_header: checking for stdio.h... -------------------- yes
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <stdio.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for stdlib.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <stdlib.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for stdarg.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <stdarg.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for string.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <string.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for unistd.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <unistd.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for signal.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <signal.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for errno.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <errno.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for assert.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <assert.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for sys/time.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/time.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for sys/types.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/types.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for sys/inotify.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/inotify.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for wordexp.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <wordexp.h>
+/* end */
+
+--------------------
+
+yes
+rm -rf conftest.dSYM
+rm -rf conftest.dSYM
+block in <top (required)>: checking for execinfo.h... -------------------- yes
+
+checking for execinfo.h... rm -rf conftest.dSYM
+find_header: checking for execinfo.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <execinfo.h>
+/* end */
+
+--------------------
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘backtrace’ undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))backtrace; return 0; }
+                                                     ^
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:4:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t() { void ((*volatile p)()); p = (void ((*)()))backtrace; return 0; }
+                            ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))backtrace; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:1: warning: implicit declaration of function ‘backtrace’ [-Wimplicit-function-declaration]
+ int t() { backtrace(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { backtrace(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+block in <top (required)>: checking for X11/Xlib.h... -------------------- yes
+
+package configuration for x11
+cflags: 
+ldflags: 
+libs: -lX11 
+
+--------------------
+
+block in <top (required)>: checking for X11/Xpm.h... -------------------- yes
+
+package configuration for xpm
+cflags: 
+ldflags: 
+libs: -lXpm -lX11 
+
+--------------------
+
+block in <top (required)>: checking for X11/Xft/Xft.h... -------------------- yes
+
+package configuration for xft
+cflags: -I/usr/include/freetype2 
+ldflags: 
+libs: -lXft 
+
+--------------------
+
+rm -rf conftest.dSYM
+have_header: checking for X11/extensions/Xinerama.h... -------------------- yes
+
+"gcc -E -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <X11/extensions/Xinerama.h>
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+rm -rf conftest.dSYM
+block in <top (required)>: checking for X11/extensions/Xrandr.h... -------------------- yes
+
+package configuration for xrandr
+cflags: 
+ldflags: 
+libs: -lXrandr 
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby -lXrandr  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘XRRGetScreenResourcesCurrent’ undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))XRRGetScreenResourcesCurrent; return 0; }
+                                                     ^
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:4:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t() { void ((*volatile p)()); p = (void ((*)()))XRRGetScreenResourcesCurrent; return 0; }
+                            ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))XRRGetScreenResourcesCurrent; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby -lXrandr  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:1: warning: implicit declaration of function ‘XRRGetScreenResourcesCurrent’ [-Wimplicit-function-declaration]
+ int t() { XRRGetScreenResourcesCurrent(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { XRRGetScreenResourcesCurrent(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+rm -rf conftest.dSYM
+block in <top (required)>: checking for X11/extensions/XTest.h... -------------------- yes
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby -lXtst -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘XTestFakeKeyEvent’ undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))XTestFakeKeyEvent; return 0; }
+                                                     ^
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:4:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t() { void ((*volatile p)()); p = (void ((*)()))XTestFakeKeyEvent; return 0; }
+                            ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))XTestFakeKeyEvent; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby -lXtst -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:1: warning: implicit declaration of function ‘XTestFakeKeyEvent’ [-Wimplicit-function-declaration]
+ int t() { XTestFakeKeyEvent(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { XTestFakeKeyEvent(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+have_func: checking for select()... -------------------- yes
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby  -lX11  -lXpm -lX11  -lXft  -lXrandr  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t() { void ((*volatile p)()); p = (void ((*)()))select; return 0; }
+                            ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))select; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+rm -rf conftest.dSYM
+rm -rf conftest.dSYM
+have_func: checking for rb_enc_set_default_internal()... -------------------- yes
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby  -lX11  -lXpm -lX11  -lXft  -lXrandr  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘rb_enc_set_default_internal’ undeclared (first use in this function)
+ int t() { void ((*volatile p)()); p = (void ((*)()))rb_enc_set_default_internal; return 0; }
+                                                     ^
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:4:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t() { void ((*volatile p)()); p = (void ((*)()))rb_enc_set_default_internal; return 0; }
+                            ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))rb_enc_set_default_internal; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-linux -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/bin     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -I/usr/include/freetype2   conftest.c  -L. -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -Wl,-R/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L.  -rdynamic -Wl,-export-dynamic         -lX11  -lXpm -lX11  -lXft  -lXrandr  -Wl,-R -Wl,/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -L/home/minasmazar/.rvm/rubies/ruby-1.9.3-p545/lib -lruby  -lX11  -lXpm -lX11  -lXft  -lXrandr  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:1: warning: implicit declaration of function ‘rb_enc_set_default_internal’ [-Wimplicit-function-declaration]
+ int t() { rb_enc_set_default_internal(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { rb_enc_set_default_internal(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
